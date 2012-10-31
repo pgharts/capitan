@@ -1,0 +1,60 @@
+Capitan
+=======
+
+Capitan is a Ruby plugin built to serve as a connector to Culturaldistrict.org through its API. cAPI provides read-only access to show listings and details, as well a as a monthly calendar feed. All responses are returned as JSON. Capitan handles the connection to cAPI, and serializes all JSON responses for use in your site.
+
+An API key is required. To receive on, contact us at helpdesk@cuturaldistrict.org
+
+Once received, the API key must be placed in your config.yml file as:
+
+capitan:
+  api_key: API_KEY
+
+
+Shows
+======
+
+Capitan divides shows into three types:
+- Productions (Shows with that are ticketed.)
+- Non-Ticketed Events (Shows that are not ticketed.)
+- Exhibitions (Installations and galleries that are open long-term.)
+
+Each of these show types can be searched through the Show object, and a type can be passed to restrict what's returned.
+Available types: ("all", "productions", "events", "exhibitions")
+
+Shows can also be searched based on a variety of criteria.
+
+Search parameters:
+min_date
+max_date
+product_line
+genre
+title
+venue
+description
+organization_id
+
+Example
+======
+
+For all shows:
+shows = Capitan::Shows.all()
+
+For all Non-Ticketed Events:
+shows = Capitan::Shows.all('events')
+
+For all Productions Before December 31, 2013 in the Jazz genre:
+ shows = Capitan::Shows.find('productions', {max_date="12/31/2013", genre="Jazz"})
+
+
+Calendar
+=======
+
+Events returned as a structured calendar can also be returned.
+
+Example
+=======
+month = Capitan::Calendar::Monthly.new(year, month)
+
+
+Copyright (c) 2012 The Pittsburgh Cultural Trust, released under the MIT license
