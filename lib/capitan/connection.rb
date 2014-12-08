@@ -41,7 +41,7 @@ class Capitan::Connection
   end
 
   def load_config_file
-    YAML.load_file("#{RAILS_ROOT}/config/config.yml")[RAILS_ENV]
+    YAML.load_file("#{Rails.root}/config/config.yml")[Rails.env]
   end
 
   def hash_to_querystring(hash)
