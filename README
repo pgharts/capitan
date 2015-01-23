@@ -1,9 +1,9 @@
 Capitan
 =======
 
-Capitan is a Ruby plugin built to serve as a connector to Culturaldistrict.org through its API. cAPI provides read-only access to show listings and details, as well a as a monthly calendar feed. All responses are returned as JSON. Capitan handles the connection to cAPI, and serializes all JSON responses for use in your site.
+Capitan is a Ruby plugin built to serve as a connector to CulturalDistrict.org through its API. cAPI provides read-only access to show listings and details, as well a as a monthly calendar feed. All responses are returned as JSON. Capitan handles the connection to cAPI, and serializes all JSON responses for use in your site.
 
-An API key is required. To receive on, contact us at helpdesk@cuturaldistrict.org
+An API key is required. To receive one, contact us at helpdesk@cuturaldistrict.org
 
 Once received, the API key must be placed in your config.yml file as:
 
