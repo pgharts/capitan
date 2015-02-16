@@ -22,7 +22,7 @@ class Capitan::Connection
 
   def get_response(url)
 
-    Rails.cache.fetch(url) do
+    Rails.cache.fetch(url, expires_in: 60.minutes) do
       RestClient.get(url)
     end
 
