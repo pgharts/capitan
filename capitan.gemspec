@@ -4,7 +4,7 @@ require "capitan"
 
 Gem::Specification.new do |s|
   s.name        = "capitan"
-  s.version     = '1.0.2'
+  s.version     = '1.0.3'
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Eric Sipple"]
   s.email       = ["sipple@trustarts.org"]
