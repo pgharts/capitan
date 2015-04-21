@@ -23,7 +23,7 @@ class Capitan::Connection
   def get_response(url)
 
     Rails.cache.fetch(url, expires_in: 60.minutes) do
-      RestClient.get(url)
+      String.new(RestClient.get(url));
     end
 
   rescue RestClient::Unauthorized, SocketError => error
