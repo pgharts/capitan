@@ -1,6 +1,7 @@
 require 'rake'
 require 'rake/testtask'
 require 'rake/rdoctask'
+require 'trustygems'
 
 desc 'Default: run unit tests.'
 task :default => :test
